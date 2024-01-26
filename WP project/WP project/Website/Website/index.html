@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script>
+    function redirectToLoginPage() {
+      window.location.href ="LoginPage.html";
+    }
+
+    function redirectToSignupPage() {
+      window.location.href = "SignupPage.html";
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mervin Clicks</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("Untitled-1.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 60px;
+      margin-bottom: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      position: fixed;
+      top: 40%;
+      right: 70%;
+      transform: translate(50%, -50%);
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      position: fixed;
+      top: 70%;
+      right: 70%;
+      transform: translate(50%, -50%);
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      position: fixed;
+      top: 50%;
+      right: 70%;
+      transform: translate(50%, -50%);
+    }
+
+    .login-button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 62%;
+      right: 74.5%;
+      transform: translate(50%, -50%);
+    }
+
+    .login-button:hover {
+      background-color: #029baf;
+    }
+
+
+    .signup-button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 62%;
+      right: 66%;
+      transform: translate(50%, -50%);
+    }
+
+    .signup-button:hover {
+      background-color: #029baf;
+    }
+
+    .FBimage-link {
+     display: inline-block;
+     text-align: center; /* adjust alignment as needed */
+     
+}
+
+    .FBaligned-image {
+     display: block;
+    margin: 0 auto; 
+    position: fixed;
+    padding: 10px 20px;
+      top: 35%;
+      right: 92%;
+      transform: translate(50%, -50%);/* center horizontally */
+  /* Additional CSS properties for alignment control can be added here */
+}
+
+
+    .IGimage-link {
+     display: inline-block;
+     text-align: center; /* adjust alignment as needed */
+     
+}
+
+    .IGaligned-image {
+     display: block;
+    margin: 0 auto; 
+    position: fixed;
+    padding: 10px 20px;
+      top: 45%;
+      right: 92%;
+      transform: translate(50%, -50%);/* center horizontally */
+  /* Additional CSS properties for alignment control can be added here */
+    }
+  
+    .TIKTOKimage-link {
+     display: inline-block;
+     text-align: center; /* adjust alignment as needed */
+     
+}
+
+    .TIKTOKaligned-image {
+     display: block;
+    margin: 0 auto; 
+    position: fixed;
+    padding: 10px 20px;
+      top: 55%;
+      right: 92%;
+      transform: translate(50%, -50%);/* center horizontally */
+  /* Additional CSS properties for alignment control can be added here */
+    }
+
+    .WHATSAPPimage-link {
+     display: inline-block;
+     text-align: center; /* adjust alignment as needed */
+     
+}
+
+    .WHATSAPPaligned-image {
+     display: block;
+    margin: 0 auto; 
+    position: fixed;
+    padding: 10px 20px;
+      top: 65%;
+      right: 92%;
+      transform: translate(50%, -50%);/* center horizontally */
+  /* Additional CSS properties for alignment control can be added here */
+    }
+
+  @media (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Mervin Clicks</h1>
+    <p>"You Live, We Capture"</p>
+    
+    <button class="signup-button" onclick="redirectToSignupPage()">Sign Up<a href ="SignupPage.html"></a></button>
+    <button class="login-button" onclick="redirectToLoginPage()">Login<a href ="LoginPage.html"></a></button>
+    <h2></h2>
+
+    <a href="https://www.facebook.com/mervinclicks" class="FBimage-link">
+      <img src="icons/facebook.png" alt="Facebook" class="FBaligned-image">
+    </a>
+    <!--This link above is for facebook link-->
+    <a href="https://www.instagram.com/mervin_clicks/" class="IGimage-link">
+      <img src="icons/instagram.png" alt="Instagram" class="IGaligned-image">
+    </a>
+    <!--This link above is for instagram link-->
+    <a href="https://www.tiktok.com/@mervinclicks" class="TIKTOKimage-link">
+      <img src="icons/tiktok.png" alt="TikTok" class="TIKTOKaligned-image">
+    </a>
+    <!--This link above is for tiktok link-->
+    <a href="https://api.whatsapp.com/send?phone=601127119115&text=%F0%9F%8D%86" class="WHATSAPPimage-link">
+      <img src="icons/whatsapp.png" alt="WhatsApp" class="WHATSAPPaligned-image">
+    </a>
+    <!--This link above is for whatsapp link-->
+  </div>
+</body>
+
+</html>

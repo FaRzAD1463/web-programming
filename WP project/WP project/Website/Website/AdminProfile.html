@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Activity Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header img {
+      width: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .header-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .tab {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+    
+    .tab.active {
+      background-color: #ccc;
+    }
+    
+    .tab-content {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+    
+    .admin-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .admin-info img {
+      width: 80px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .back-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: fixed;
+      top: 75px;
+      right: 100px;
+      transform: translate(50%, -50%);
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="admin-info">
+      <img src="user_profile_picture_ml.png" alt="Admin Profile Picture">
+      <div class="header-content">
+        <h1>Mervin</h1>
+        <p>Photographer</p>
+      </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openTab('new-booking')">New Booking</div>
+    <div class="tab" onclick="openTab('booking-history')">Booking History</div>
+    <div class="tab" onclick="openTab('upload-pictures')">Upload Pictures/Videos</div>
+  </div>
+
+  <div id="new-booking" class="tab-content">
+    <!-- New booking content goes here -->
+    <h2>New Booking</h2>
+    <p>This is the new booking section.</p>
+  </div>
+
+  <div id="booking-history" class="tab-content" style="display: none;">
+    <!-- Booking history content goes here -->
+    <h2>Booking History</h2>
+    <p>This is the booking history section.</p>
+  </div>
+
+  <div id="upload-pictures" class="tab-content" style="display: none;">
+    <!-- Upload pictures/videos content goes here -->
+    <h2>Upload Pictures/Videos</h2>
+    <p>This is the upload pictures/videos section.</p>
+    <div class="customer-tabs">
+      <h3>Select Customer:</h3>
+      <ul>
+        <li onclick="openCustomerTab('customer1')">Customer 1</li>
+        <li onclick="openCustomerTab('customer2')">Customer 2</li>
+        <li onclick="openCustomerTab('customer3')">Customer 3</li>
+      </ul>
+    </div>
+    <div id="customer1" class="customer-tab-content" style="display: none;">
+      <!-- Customer 1 specific content goes here -->
+      <h4>Upload Pictures/Videos for Customer 1</h4>
+      <form>
+        <!-- Upload form for Customer 1 -->
+      </form>
+    </div>
+    <div id="customer2" class="customer-tab-content" style="display: none;">
+      <!-- Customer 2 specific content goes here -->
+      <h4>Upload Pictures/Videos for Customer 2</h4>
+      <form>
+        <!-- Upload form for Customer 2 -->
+      </form>
+    </div>
+    <div id="customer3" class="customer-tab-content" style="display: none;">
+      <!-- Customer 3 specific content goes here -->
+      <h4>Upload Pictures/Videos for Customer 3</h4>
+      <form>
+        <!-- Upload form for Customer 3 -->
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      var tabs = document.getElementsByClassName("tab-content");
+      var tabButtons = document.getElementsByClassName("tab");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+        tabButtons[i].classList.remove("active");
+      }
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.classList.add("active");
+    }
+    
+    function openCustomerTab(tabName) {
+      var customerTabs = document.getElementsByClassName("customer-tab-content");
+      for (var i = 0; i < customerTabs.length; i++) {
+        customerTabs[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

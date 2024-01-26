@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activity Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .header img {
+      width: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      color:#fff;
+    }
+    
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .tab {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+    
+    .tab.active {
+      background-color: #ccc;
+    }
+    
+    .tab-content {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .login-button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #000000;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #029baf;
+    }
+
+    .back-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: fixed;
+      top: 75px;
+      right: 100px;
+      transform: translate(50%, -50%);
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="user_profile_picture_fml.png" alt="Profile Picture">
+    <div class="header-content">
+      <h1>Eleanor</h1>
+      <p>New Member</p>
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>  
+</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openTab('booking-history')">Booking History</div>
+    <div class="tab" onclick="openTab('create-booking')">Create a New Booking</div>
+    <div class="tab" onclick="openTab('download-pictures')">Download Pictures</div>
+  </div>
+
+  <div id="booking-history" class="tab-content">
+    <!-- Booking history content goes here -->
+    <h2>Booking History</h2>
+    <p>This is the booking history section.</p>
+  </div>
+
+  <div id="create-booking" class="tab-content" style="display: none;">
+    <!-- Create a new booking content goes here -->
+    <h2>Create a New Booking</h2>
+    <p>This is the create a new booking section.</p>
+  </div>
+
+  <div id="download-pictures" class="tab-content" style="display: none;">
+    <!-- Download pictures content goes here -->
+    <h2>Download Content</h2>
+    <p>This is the download content section.</p>
+    <button class="login-button" onclick="redirectToLoginPage()">Kakitangan Draft Video<a href ="LoginPage.html"></a></button>
+  </div>
+
+</div>
+
+  <script>
+    function openTab(tabName) {
+      var tabs = document.getElementsByClassName("tab-content");
+      var tabButtons = document.getElementsByClassName("tab");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+        tabButtons[i].classList.remove("active");
+      }
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.classList.add("active");
+    }
+    
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
